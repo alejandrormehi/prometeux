@@ -164,9 +164,29 @@ section{
     color: #fff;
 }
 
+.clientes{
+    background: wheat;
+    background-image:  radial-gradient(#49494f 0.5px, transparent 0.5px), radial-gradient(#49494f 0.5px, #DBC8B9 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+.clientes_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+    padding: 0;
+}
+.clientes_picture{
+    max-width: 300px;
 
+}
 
-
+.clientes_img{
+    width: 100%;
+    display: block;
+}
 
 .slider-navigation{
     z-index: 888;
@@ -209,18 +229,62 @@ section{
 
 }
 
+.boton_descarga_tarifas{
+    text-align: center;
+    margin-top: 20px;
+}
 
+/*GALERIA MOSAICO*/
 
+.container_gal{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
 
+.box_gal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.box_gal:nth-child(1){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.box_gal:nth-child(2){
+    grid-row-start: span 2;
+}
+.box_gal:nth-child(4){
+    grid-column-start: span 2;
+}
 
+.box_gal:nth-child(5){
+    grid-column-start: span 2;
+}
 
+@media(max-width:991px){
+    .container_gal{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
+    .box_gal:nth-child(1){
+        grid-column-start: span 1;
+    }
 
-
-
-
-
+    
+    .box_gal:nth-child(4){
+        grid-column-start: span 1;
+    }
+    .box_gal:nth-child(5){
+        grid-column-start: span 1;
+    }
+}
 
 /*FOOTER, ESTO NO CAMBIA*/
 /*FOOTER*/
